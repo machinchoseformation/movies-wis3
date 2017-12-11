@@ -1,4 +1,4 @@
-# Movies ! | WIS3
+# Movies! | WIS3
 
 ## Présentation
 
@@ -76,7 +76,7 @@ Au bas de la liste des posters, un lien permet d'afficher 50 autres films au has
 
 L’entête du site (commune à toutes les pages) affiche un logo (à vous de choisir sur le web) et le nom du site (Movies­ !). Ceux-ci sont cliquables et mènent vers l’accueil. Prévoir un emplacement pour un menu horizontal.
 
-Le pied de page (commun à toutes les pages) du site affiche "©2017 Movies !"
+Le pied de page (commun à toutes les pages) du site affiche "©2017 Movies!"
 
 **Conseils**
 
@@ -116,7 +116,7 @@ Vous pouvez aussi créer un lien vers la page de recherche d’un site de télé
 
 **Comment passer l’id du film dans l’URL ?**
 
-1. Sur index.php, ajouter l’id de chaque film dans l’attribut href de vos liens. Ceux-ci doivent prendre la forme suivante : <a href="detail.php?id=999">
+1. Sur index.php, ajouter l’id de chaque film dans l’attribut href de vos liens. Ceux-ci doivent prendre la forme suivante : detail.php?id=999
 
 2. Rechargez bien la page index.php
 
