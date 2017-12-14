@@ -1,5 +1,11 @@
 <?php 
 
+    session_start();
+
+    if (empty($_SESSION["isConnected"])){
+        header("Location: login.php");
+        die();
+    }
 
 
 ?>

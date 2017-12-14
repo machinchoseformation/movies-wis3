@@ -1,6 +1,9 @@
 <?php 
 
+session_start();
+echo $_SESSION["views"];
 
+$_SESSION["isConnected"] = true;
 
 ?>
 <!DOCTYPE html>

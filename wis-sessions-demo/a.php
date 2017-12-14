@@ -1,8 +1,12 @@
 <?php 
 //les sessions : 
-//permettent de garder des données en mémoire d'une page à l'autre
+//permettent de garder des données en mémoire sur le serveur
 
+session_start();
 
+$_SESSION["views"] = $_SESSION["views"] + 1;
+
+echo $_SESSION["views"];
 
 ?>
 <!DOCTYPE html>
