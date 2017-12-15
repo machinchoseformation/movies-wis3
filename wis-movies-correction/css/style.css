@@ -1,0 +1,284 @@
+body {
+    background-color: #252120;
+    color: rgb(200, 205, 212);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 350px;
+}
+
+a {
+    color: rgb(200, 205, 212);
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Patua One', cursive;
+    letter-spacing: 1px;
+    margin: 10px 0 15px 0;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header nav a {
+    display: block;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+#filters_container input, #filters_container select {
+    display: block;
+    width: 100%;
+}
+
+a:hover {
+    color: #FFF;
+}
+
+.posters::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.posters a {
+    width: 210px;
+    height: 300px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    opacity: 0.9;
+    margin: 1px;
+    position: relative;
+}
+
+.posters a .poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+    font-size: 52px;
+    display: block;
+    transition: 0.2s;
+}
+
+.posters a:hover .poster-overlay {
+    left: 0;
+}
+
+.posters img {
+    position: absolute;
+}
+
+.posters a:hover {
+    opacity: 1;
+}
+
+.posters img, .detail img {
+    max-width: 100%;
+}
+
+#load-more {
+    text-align: center;
+    padding-top: 132px;
+    background-color:#000;
+    color: #FFF;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+
+.detail h2 {
+    margin: 0 0 0 0;
+    font-size: 36px;
+}
+
+.detail .year {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.detail .rating {
+    font-size: 24px;
+}
+
+.detail h3, .detail h4 {
+    margin-bottom: 2px;
+}
+
+.detail p {
+    margin: 0 0 5px 0;
+}
+
+/* piqué sur https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.detail .reviews div {
+    margin: 10px 0;
+}
+
+.detail .reviews .review-info {
+    font-style: italic;
+}
+
+.second-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-row div {
+    flex-grow: 1;
+}
+
+a.btn {
+    display: block;
+    padding: 7px 12px;
+    border-radius: 2px;
+    color: #000;
+    background-color: rgb(53, 202, 73);
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+a.btn.btn-red {
+    background-color: rgb(187, 28, 28);
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans', sans-serif;    
+}
+
+button {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 4px 10px;   
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+}
+
+footer {
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    clear: both;
+}
+
+@media screen and (min-width:350px){
+    .container {width: 330px;}
+
+    .posters a {
+        width: 330px;
+        height: 471px;
+    }
+}
+
+@media screen and (min-width:490px){
+    .container {max-width: 430px; width: 430px;} 
+
+    .posters a {
+        width: 210px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:700px){
+    .container {
+        width: 650px; 
+        max-width: 100%;
+    }
+
+    header {
+        align-items: baseline;
+        flex-direction: row;        
+    }
+
+    header nav {
+        margin-left: 50px;
+    }    
+    
+    header nav a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .detail h2 {
+        margin-top: -8px;
+    }
+    
+    .detail {
+        display: flex;
+    }
+
+    .second-row {
+        flex-direction: row-reverse;        
+    }
+
+    .detail-right-col, .second-row-left-col {
+        margin-left: 30px;
+    }
+
+    .second-row-right-col {
+        max-width: 300px;
+    }
+
+    #filters_container input, #filters_container select, #filters_container form {
+        display: inline;
+        width: 200px;
+    }
+
+    #filters_container form {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width:910px){
+    .container {width: 860px;}
+
+    .detail-left-col {
+        min-width: 350px;
+        height: auto;
+    }
+
+    .second-row-right-col {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:1120px){
+    .container {width: 1070px;}
+}
